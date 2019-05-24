@@ -14,20 +14,16 @@ namespace ProgramacionNCapas
     {
         SqlConnection con;
         SqlCommand cmd;
-        //SqlDataReader dr;
         SqlDataAdapter da;
         DataTable dt;
-    
-
+   
         public Conexion()
         {
-           
             try
             {
-                //con = new SqlConnection("Data Source=EMIL56\\SQLEXPRESS; Initial Catalog=ControlPasantia; Integrated Security=True");
-                con = new SqlConnection("Data Source =EMIL56\\SQLEXPRESS; Initial Catalog = ControlPasantia; User ID = emil; Password = 5656");
+                con = new SqlConnection("Data Source=.\\SQLEXPRESS; Initial Catalog=ControlPasantiaDb; Integrated Security=True");
+                //con = new SqlConnection("Data Source =EMIL56\\SQLEXPRESS; Initial Catalog = ControlPasantia; User ID = emil; Password = 5656");
                 con.Open();
-              //  MessageBox.Show("Conectado");
             }
             catch(Exception ex)
             {
@@ -35,48 +31,55 @@ namespace ProgramacionNCapas
             }
         }
 
-        public string insertar(int id,string nombre,string apellido,string universidad,string fecha,int horaCursar)
+        public string insertar(string nombre,string apellido,string universidad, DateTime fecha  ,int horaCursar)
         {
             string salida = "Guardado Con Exito";
+            string sql = "";
             try
             {
-                cmd = new SqlCommand("Insert into Estudiante(id,nombre,apellido,universidad,fechaIngreso,horaCursar) values("+id+",'" + nombre + "','" + apellido + "','"+universidad+"','"+fecha+"',"+horaCursar+")", con);
+                sql = "Insert into Estudiante(nombre,apellido,universidad,fechaIngreso,horaCursar) values('" + nombre + "','" + apellido + "','" + universidad + "','" + fecha.ToString("yyyyMMdd") + "'," + horaCursar + ")";
+                cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();      
             }
             catch(Exception ex)
             {
                 salida = "Error al Guardar" + ex.ToString();
-            }      
+            }   
+            finally
+            {
                 con.Close();
+            }
             return salida;
-        }
-        //.......................................................
+        }        
 
-        public string insertarControl(int id ,string fecha,string horaEntrada,string horaSalida)
+        public string insertarControl(int id ,DateTime fecha,DateTime horaEntrada,DateTime horaSalida,double horas,double horasR)
         {
-            string salida = "Guardado Con Exito";
+            string salida = "";
+            string sql = "";
             try
             {
-                cmd = new SqlCommand("Insert into Control(id,fecha,horaEntrada,horaSalida) values(" +id+",'"+fecha+"','"+horaEntrada+"','"+horaSalida+"')", con);
-                //cmd = new SqlCommand("Insert into Control(id,fecha,horaEntrada,horaSalida) values(" + id + ",'" + fecha + "','" + horaEntrada + "','" + horaSalida + "')", con);
-
+                sql = "Insert into Control(idPasante,fecha,horaEntrada,horaSalida,horas,horaRestante) values("+id+",'"+fecha.ToString("yyyyMMdd")+"','"+horaEntrada.ToString("hh:mm:ss")+"','"+horaSalida.ToString("hh:mm:ss")+"',"+horas+","+horasR+")";
+                cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
                 salida = "Error al Guardar" + ex.ToString();
             }
-            con.Close();
+            finally
+            {
+                con.Close();
+            }
             return salida;
         }
 
         //..................
 
-        public void cargar(DataGridView dgv)
+        public void ListadoPasante(DataGridView dgv)
         {
             try
             {
-                da = new SqlDataAdapter("Select * from Estudiante", con);
+                da = new SqlDataAdapter("select id AS'ID',nombre AS 'Nombre',apellido AS 'Apellido',universidad AS 'Universidad',fechaIngreso AS 'Fecha Ingreso',horaCursar AS 'Hora Cursar' from Estudiante ", con);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
@@ -87,15 +90,11 @@ namespace ProgramacionNCapas
             }
         }
 
-
-        public void cargar2(DataGridView dgv)
+        public void ListadoControl(DataGridView dgv)
         {
             try
-            {
-                // da = new SqlDataAdapter("Select * from Control", con);
-                //  da = new SqlDataAdapter("Select * from Control ", con);
-
-                da = new SqlDataAdapter("select id AS'ID',fecha AS 'Fecha',horaEntrada AS 'Hora Entrada', horaSalida AS 'Hora Salida' from Control", con);
+            { 
+                da = new SqlDataAdapter("select idPasante AS'ID',fecha AS 'Fecha',horaEntrada AS 'Hora Entrada', horaSalida AS 'Hora Salida', horas AS 'Horas',horaRestante AS 'Horas Restante' from Control", con);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
@@ -105,5 +104,89 @@ namespace ProgramacionNCapas
                 MessageBox.Show("No se pudo llenar el datagridview" + ex.ToString());
             }
         }
+
+
+        public bool Existe(int id)
+        {
+            bool paso = false;
+            string sql = "";
+            try
+            {
+                sql = " SELECT COUNT(*) FROM Estudiante WHERE id ="+id+"";
+                cmd = new SqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                if (count == 0)
+                    return false;
+                else
+                    return true;
+
+            }
+            catch (Exception)
+            {
+
+            }
+            return paso;
+        }
+
+
+        public string Reporte(int id)
+        {
+            string paso = "";
+            try
+            {
+                cmd = new SqlCommand("select sum(horas)  from Control where id ="+id+" ",con);
+             
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return paso;
+        }
+
+
+        //
+
+
+        //command = new MySqlCommand(string.Format("SELECT CodigoProducto, Descripcion,Precio ,Cantidad,  Provedor, FechaVencimiento FROM Producto where date_sub(FechaVencimiento, interval 30 day) <= curdate()"), conn);
+
+
+        public void llenacombobox(ComboBox cb)
+        {
+            try
+            {
+                da = new SqlDataAdapter("select id,nombre AS 'Nombre' from Estudiante ", con);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                cb.ValueMember = "ID";
+                cb.DisplayMember = "Nombre";
+                cb.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+    public void logins(string usuario,string pass)
+        {
+            try
+            {
+                cmd = new SqlCommand("SELECT usuario, pass FROM usuarios WHERE usuario = @usuario AND pass = @pass");
+                cmd.ExecuteNonQuery();              
+            } 
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }
+

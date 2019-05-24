@@ -40,23 +40,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.horaCursarnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.nuevobutton = new System.Windows.Forms.Button();
-            this.buscarbutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.guardarbutton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label65 = new System.Windows.Forms.Label();
-            this.idnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.nuevobutton = new System.Windows.Forms.Button();
+            this.guardarbutton = new System.Windows.Forms.Button();
+            this.Cancelarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.horaCursarnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.idnumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 81);
+            this.label1.Location = new System.Drawing.Point(21, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 0;
@@ -64,7 +60,7 @@
             // 
             // nombretextBox
             // 
-            this.nombretextBox.Location = new System.Drawing.Point(154, 81);
+            this.nombretextBox.Location = new System.Drawing.Point(154, 31);
             this.nombretextBox.Name = "nombretextBox";
             this.nombretextBox.Size = new System.Drawing.Size(130, 20);
             this.nombretextBox.TabIndex = 1;
@@ -72,7 +68,7 @@
             // 
             // apellidotextBox
             // 
-            this.apellidotextBox.Location = new System.Drawing.Point(154, 119);
+            this.apellidotextBox.Location = new System.Drawing.Point(154, 69);
             this.apellidotextBox.Name = "apellidotextBox";
             this.apellidotextBox.Size = new System.Drawing.Size(130, 20);
             this.apellidotextBox.TabIndex = 3;
@@ -81,7 +77,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 119);
+            this.label2.Location = new System.Drawing.Point(21, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 2;
@@ -89,7 +85,7 @@
             // 
             // universidadtextBox
             // 
-            this.universidadtextBox.Location = new System.Drawing.Point(154, 158);
+            this.universidadtextBox.Location = new System.Drawing.Point(154, 108);
             this.universidadtextBox.Name = "universidadtextBox";
             this.universidadtextBox.Size = new System.Drawing.Size(130, 20);
             this.universidadtextBox.TabIndex = 5;
@@ -98,7 +94,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 158);
+            this.label3.Location = new System.Drawing.Point(21, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 4;
@@ -107,7 +103,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 199);
+            this.label5.Location = new System.Drawing.Point(21, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 13);
             this.label5.TabIndex = 11;
@@ -115,9 +111,9 @@
             // 
             // dtpfecha
             // 
-            this.dtpfecha.CustomFormat = "dd/MM/yyyy";
+            this.dtpfecha.CustomFormat = "";
             this.dtpfecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpfecha.Location = new System.Drawing.Point(154, 199);
+            this.dtpfecha.Location = new System.Drawing.Point(154, 149);
             this.dtpfecha.Name = "dtpfecha";
             this.dtpfecha.Size = new System.Drawing.Size(130, 20);
             this.dtpfecha.TabIndex = 12;
@@ -125,7 +121,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 236);
+            this.label4.Location = new System.Drawing.Point(21, 186);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 13);
             this.label4.TabIndex = 13;
@@ -133,7 +129,7 @@
             // 
             // horaCursarnumericUpDown
             // 
-            this.horaCursarnumericUpDown.Location = new System.Drawing.Point(154, 236);
+            this.horaCursarnumericUpDown.Location = new System.Drawing.Point(154, 186);
             this.horaCursarnumericUpDown.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -157,13 +153,24 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.nuevobutton);
+            this.groupBox1.Controls.Add(this.guardarbutton);
+            this.groupBox1.Controls.Add(this.Cancelarbutton);
+            this.groupBox1.Location = new System.Drawing.Point(36, 224);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(284, 87);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            // 
             // nuevobutton
             // 
             this.nuevobutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.errorProvider.SetIconAlignment(this.nuevobutton, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
             this.nuevobutton.Image = global::ProgramacionNCapas.Properties.Resources.New_file_icon1;
             this.nuevobutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.nuevobutton.Location = new System.Drawing.Point(15, 12);
+            this.nuevobutton.Location = new System.Drawing.Point(15, 13);
             this.nuevobutton.Name = "nuevobutton";
             this.nuevobutton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.nuevobutton.Size = new System.Drawing.Size(71, 68);
@@ -174,35 +181,11 @@
             this.nuevobutton.UseVisualStyleBackColor = true;
             this.nuevobutton.Click += new System.EventHandler(this.nuevobutton_Click);
             // 
-            // buscarbutton
-            // 
-            this.buscarbutton.Image = global::ProgramacionNCapas.Properties.Resources.icons8_búsqueda_50;
-            this.buscarbutton.Location = new System.Drawing.Point(250, 12);
-            this.buscarbutton.Name = "buscarbutton";
-            this.buscarbutton.Size = new System.Drawing.Size(75, 54);
-            this.buscarbutton.TabIndex = 9;
-            this.buscarbutton.Text = "Buscar";
-            this.buscarbutton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.buscarbutton.UseVisualStyleBackColor = true;
-            this.buscarbutton.Click += new System.EventHandler(this.buscarbutton_Click);
-            // 
-            // Eliminarbutton
-            // 
-            this.Eliminarbutton.Image = global::ProgramacionNCapas.Properties.Resources.icons8_eliminar_vista_50;
-            this.Eliminarbutton.Location = new System.Drawing.Point(204, 12);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(74, 68);
-            this.Eliminarbutton.TabIndex = 8;
-            this.Eliminarbutton.Text = "Borrar";
-            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.Eliminarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            // 
             // guardarbutton
             // 
             this.guardarbutton.Image = global::ProgramacionNCapas.Properties.Resources.icons8_guardar_50;
             this.guardarbutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.guardarbutton.Location = new System.Drawing.Point(113, 12);
+            this.guardarbutton.Location = new System.Drawing.Point(113, 13);
             this.guardarbutton.Name = "guardarbutton";
             this.guardarbutton.Size = new System.Drawing.Size(73, 68);
             this.guardarbutton.TabIndex = 7;
@@ -212,46 +195,29 @@
             this.guardarbutton.UseVisualStyleBackColor = true;
             this.guardarbutton.Click += new System.EventHandler(this.guardarbutton_Click);
             // 
-            // groupBox1
+            // Cancelarbutton
             // 
-            this.groupBox1.Controls.Add(this.nuevobutton);
-            this.groupBox1.Controls.Add(this.guardarbutton);
-            this.groupBox1.Controls.Add(this.Eliminarbutton);
-            this.groupBox1.Location = new System.Drawing.Point(41, 262);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(284, 87);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Location = new System.Drawing.Point(21, 37);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(18, 13);
-            this.label65.TabIndex = 16;
-            this.label65.Text = "ID";
-            // 
-            // idnumericUpDown
-            // 
-            this.idnumericUpDown.Location = new System.Drawing.Point(154, 37);
-            this.idnumericUpDown.Name = "idnumericUpDown";
-            this.idnumericUpDown.Size = new System.Drawing.Size(59, 20);
-            this.idnumericUpDown.TabIndex = 17;
+            this.Cancelarbutton.Image = global::ProgramacionNCapas.Properties.Resources.Cancel_icon_icons_com_73703__1_;
+            this.Cancelarbutton.Location = new System.Drawing.Point(204, 13);
+            this.Cancelarbutton.Name = "Cancelarbutton";
+            this.Cancelarbutton.Size = new System.Drawing.Size(74, 68);
+            this.Cancelarbutton.TabIndex = 8;
+            this.Cancelarbutton.Text = "Cancelar";
+            this.Cancelarbutton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.Cancelarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Cancelarbutton.UseVisualStyleBackColor = true;
+            this.Cancelarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // RegistroPasante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 365);
-            this.Controls.Add(this.idnumericUpDown);
-            this.Controls.Add(this.label65);
+            this.ClientSize = new System.Drawing.Size(349, 327);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.horaCursarnumericUpDown);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dtpfecha);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.buscarbutton);
             this.Controls.Add(this.universidadtextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.apellidotextBox);
@@ -263,7 +229,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.horaCursarnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.idnumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,8 +240,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button guardarbutton;
-        private System.Windows.Forms.Button Eliminarbutton;
-        private System.Windows.Forms.Button buscarbutton;
+        private System.Windows.Forms.Button Cancelarbutton;
         private System.Windows.Forms.Button nuevobutton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -287,7 +251,5 @@
         public System.Windows.Forms.TextBox universidadtextBox;
         public System.Windows.Forms.DateTimePicker dtpfecha;
         public System.Windows.Forms.NumericUpDown horaCursarnumericUpDown;
-        private System.Windows.Forms.NumericUpDown idnumericUpDown;
-        private System.Windows.Forms.Label label65;
     }
 }

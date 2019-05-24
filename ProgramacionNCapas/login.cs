@@ -14,14 +14,13 @@ namespace ProgramacionNCapas
 {
     public partial class login : Form
     {
+        Conexion c = new Conexion();
         String cs = "Data Source =EMIL56\\SQLEXPRESS; Initial Catalog = ControlPasantia; User ID = emil; Password = 5656";
 
         public login()
         {
             InitializeComponent();
         }
-
-
 
         public void logins()
         {
@@ -48,43 +47,25 @@ namespace ProgramacionNCapas
 
                 SqlDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
 
-                /* try
-                 {
-                     string cnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
-                     using (SqlConnection conexion = new SqlConnection(cnn))
-                     {
-                         conexion.Open();
-                         using (SqlCommand cmd = new SqlCommand("SELECT usuario,pass FROM usuarios WHERE usuario ='" + usertextBox.Text + "'AND pass ='" + passtextBox.Text + "'", conexion))
-                         {
-                             SqlDataReader dr = cmd.ExecuteReader();
-
-                             if (dr.Read())
-                             {
-                                 MessageBox.Show("login");
-                             }
-                             else
-                             {
-                                 MessageBox.Show("Datos Incorrectos");
-                             }
-
-                         }
-                     }
-                 }
-                 catch(Exception ex)
-                 {
-                     MessageBox.Show(ex.ToString());
-                 } */
                 if (myReader.Read() == true)
                 {
-                    MessageBox.Show("You have logged in successfully " + usertextBox.Text);
+                    //controlPasante cp = new controlPasante();
+                   // cp.add();
+                    
+                    //MessageBox.Show(c.insertarControl(Convert.ToInt32(idEstudiante.Text), fecha.Text, horaEntrada.Text, horaSalida.Text));
+                    // c.cargar2(ControldataGridView);
+                    //MessageBox.Show("You have logged in successfully " + usertextBox.Text);
                     //Hide the login form
+
+                   // MessageBox.Show(c.insertarControl(Convert.ToInt32(idEstudiante.Text), fecha.Text, horaEntrada.Text, horaSalida.Text));
+                    //c.cargar2(ControldataGridView);
                     this.Hide();
                 }
 
 
                 else
                 {
-                    MessageBox.Show("Login Failed...Try again !", "Login Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Usuario o Contraseña Incorrecto", "Acceso denegado!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     usertextBox.Clear();
                     passtextBox.Clear();

@@ -63,6 +63,26 @@ namespace ProgramacionNCapas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cancel_icon_icons_com_73703 {
+            get {
+                object obj = ResourceManager.GetObject("Cancel_icon-icons.com_73703", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cancel_icon_icons_com_73703__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Cancel_icon-icons.com_73703 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_agregar_propiedad_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8-agregar-propiedad-20", resourceCulture);
@@ -126,6 +146,16 @@ namespace ProgramacionNCapas.Properties {
         internal static System.Drawing.Bitmap new_page_document_16676 {
             get {
                 object obj = ResourceManager.GetObject("new_page_document_16676", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap printer_78349 {
+            get {
+                object obj = ResourceManager.GetObject("printer_78349", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

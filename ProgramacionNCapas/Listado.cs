@@ -15,6 +15,8 @@ namespace ProgramacionNCapas
         Conexion c = new Conexion();
         RegistroPasante rg = new RegistroPasante();
 
+        public  int ID =0;
+        
         public Listado()
         {
             InitializeComponent();
@@ -22,27 +24,16 @@ namespace ProgramacionNCapas
 
         private void Listado_Load(object sender, EventArgs e)
         {
-            c.cargar(listadodataGridView);
+            c.ListadoPasante(listadodataGridView);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
+        private void BtnCargar_Click(object sender, EventArgs e)
+        {      
+            if (listadodataGridView.Rows.Count >0)
             {
-                //  listadodataGridView.CurrentRow.Selected = true;
-               // if (listadodataGridView.Rows.Contains > 0)
-               // {
-                    rg.nombretextBox.Text = listadodataGridView.CurrentRow.Cells["Nombre"].Value.ToString();
-                    rg.apellidotextBox.Text = listadodataGridView.CurrentRow.Cells["Apellido"].Value.ToString();
-                    rg.universidadtextBox.Text = listadodataGridView.CurrentRow.Cells["Universidad"].Value.ToString();
-                    // vern.Dato.Nombre = dgvDocente.Rows[e.RowIndex].Cells["Nombre"].Value.ToString();
-               // }
+                ID = int.Parse(listadodataGridView.CurrentRow.Cells[0].Value.ToString());
+                this.Close();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-
         }
     }
 }

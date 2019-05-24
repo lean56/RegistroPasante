@@ -48,9 +48,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,6 +76,30 @@
     </Compile>
     <Compile Include="controlPasante.Designer.cs">
       <DependentUpon>controlPasante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EstadoPasante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstadoPasante.Designer.cs">
+      <DependentUpon>EstadoPasante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstadoPasanteReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstadoPasanteReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Listado.cs">
       <SubType>Form</SubType>
@@ -95,8 +127,41 @@
     <Compile Include="RegistroPasante.Designer.cs">
       <DependentUpon>RegistroPasante.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte.Designer.cs">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaEstadoPasante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaEstadoPasante.Designer.cs">
+      <DependentUpon>VentanaEstadoPasante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaReporte.Designer.cs">
+      <DependentUpon>VentanaReporte.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="controlPasante.resx">
       <DependentUpon>controlPasante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadoPasante.resx">
+      <DependentUpon>EstadoPasante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstadoPasanteReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EstadoPasanteReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Listado.resx">
       <DependentUpon>Listado.cs</DependentUpon>
@@ -119,6 +184,15 @@
     </Compile>
     <EmbeddedResource Include="RegistroPasante.resx">
       <DependentUpon>RegistroPasante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte.resx">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaEstadoPasante.resx">
+      <DependentUpon>VentanaEstadoPasante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaReporte.resx">
+      <DependentUpon>VentanaReporte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="login.config" />
     <None Include="Properties\Settings.settings">
@@ -166,6 +240,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-búsqueda-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_icon-icons.com_73703.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_icon-icons.com_73703 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer_78349.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

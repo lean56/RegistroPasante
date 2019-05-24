@@ -35,6 +35,7 @@
             this.controlPasanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteListadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadoPasanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,7 +83,8 @@
             // reporteToolStripMenuItem
             // 
             this.reporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reporteListadoToolStripMenuItem});
+            this.reporteListadoToolStripMenuItem,
+            this.estadoPasanteToolStripMenuItem});
             this.reporteToolStripMenuItem.Name = "reporteToolStripMenuItem";
             this.reporteToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.reporteToolStripMenuItem.Text = "Reporte";
@@ -91,8 +93,15 @@
             // 
             this.reporteListadoToolStripMenuItem.Name = "reporteListadoToolStripMenuItem";
             this.reporteListadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.reporteListadoToolStripMenuItem.Text = "Reporte Listado";
+            this.reporteListadoToolStripMenuItem.Text = "Horas Cursada";
             this.reporteListadoToolStripMenuItem.Click += new System.EventHandler(this.reporteListadoToolStripMenuItem_Click);
+            // 
+            // estadoPasanteToolStripMenuItem
+            // 
+            this.estadoPasanteToolStripMenuItem.Name = "estadoPasanteToolStripMenuItem";
+            this.estadoPasanteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.estadoPasanteToolStripMenuItem.Text = "Estado Pasante";
+            this.estadoPasanteToolStripMenuItem.Click += new System.EventHandler(this.estadoPasanteToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -119,6 +128,7 @@
         private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteListadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem controlPasanteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estadoPasanteToolStripMenuItem;
     }
 }
 

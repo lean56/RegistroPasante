@@ -12,8 +12,6 @@ namespace ProgramacionNCapas
 {
     public partial class RegistroPasante : Form
     {
-        Conexion c = new Conexion();
-
         public RegistroPasante()
         {
             InitializeComponent();
@@ -26,8 +24,6 @@ namespace ProgramacionNCapas
 
         private void guardarbutton_Click(object sender, EventArgs e)
         {
-            RegistroPasante rg = new RegistroPasante();
-
             if (nombretextBox.Text == "")
             {
                 errorProvider.SetError(nombretextBox, "Campo Vacio");
@@ -42,27 +38,22 @@ namespace ProgramacionNCapas
             {
                 errorProvider.SetError(universidadtextBox, "Campo Vacio");
             }
-          
             else
             {
-                MessageBox.Show(c.insertar(Convert.ToInt32(idnumericUpDown.Value), nombretextBox.Text, apellidotextBox.Text, universidadtextBox.Text, dtpfecha.Text, Convert.ToInt32(horaCursarnumericUpDown.Value)));
+                Conexion c = new Conexion();
+                MessageBox.Show(c.insertar(nombretextBox.Text, apellidotextBox.Text, universidadtextBox.Text, dtpfecha.Value, Convert.ToInt32(horaCursarnumericUpDown.Value)));
                 nuevo();
                 Close();
             }
-        
         }
 
-        private void buscarbutton_Click(object sender, EventArgs e)
-        {
-            Listado l = new Listado();
-            l.Show();
-        }
         private void nuevo()
         {
             nombretextBox.Text = "";
             apellidotextBox.Text = "";
             universidadtextBox.Text = "";
             horaCursarnumericUpDown.Value = 1;
+            dtpfecha.Value = DateTime.Now;
             errorProvider.SetError(nombretextBox, "");
             errorProvider.SetError(apellidotextBox, "");
             errorProvider.SetError(universidadtextBox, "");
@@ -88,5 +79,9 @@ namespace ProgramacionNCapas
             errorProvider.SetError(universidadtextBox, "");
         }
 
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

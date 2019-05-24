@@ -64,6 +64,7 @@
             // 
             this.passtextBox.Location = new System.Drawing.Point(97, 99);
             this.passtextBox.Name = "passtextBox";
+            this.passtextBox.PasswordChar = '*';
             this.passtextBox.Size = new System.Drawing.Size(100, 20);
             this.passtextBox.TabIndex = 3;
             // 
@@ -81,7 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 226);
+            this.ClientSize = new System.Drawing.Size(273, 226);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.passtextBox);
             this.Controls.Add(this.usertextBox);
@@ -98,8 +99,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox usertextBox;
-        private System.Windows.Forms.TextBox passtextBox;
         private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox usertextBox;
+        public System.Windows.Forms.TextBox passtextBox;
     }
 }

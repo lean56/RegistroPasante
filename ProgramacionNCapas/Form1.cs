@@ -38,8 +38,16 @@ namespace ProgramacionNCapas
 
         private void reporteListadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            login lo = new login();
-            lo.Show();
+            //login lo = new login();
+            //lo.Show();
+            Reporte r = new Reporte();
+            r.Show();
+        }
+
+        private void estadoPasanteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EstadoPasante ep = new EstadoPasante();
+            ep.Show();
         }
     }
 }
