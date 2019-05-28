@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace ProgramacionNCapas
 {
     public partial class Reporte : Form
@@ -16,9 +17,6 @@ namespace ProgramacionNCapas
         SqlConnection con;
         SqlDataAdapter da;
         DataTable dt;
-
-       // VentanaReporte report = new VentanaReporte();
-       // CrystalReport cr = new CrystalReport();
 
         public Reporte()
         {
@@ -36,25 +34,23 @@ namespace ProgramacionNCapas
 
         public string reporte(DataGridView dgv)
         {
-            VentanaReporte report = new VentanaReporte();
-            CrystalReport1 cr = new CrystalReport1();
-
             string sql = "";
             try
             {
-                sql = "select C.idPasante,P.nombre,P.apellido,c.fecha,c.horas from dbo.Estudiante P, dbo.Control C where c.idPasante = P.id and c.idPasante=" + IdtextBox.Text + "and fecha between '" + DesdedateTimePicker.Value.ToString("yyyy-MM-dd") + "' and '" + HastadateTimePicker.Value.ToString("yyyy-MM-dd") + "' ";
-          //      sql = "select C.idPasante,P.nombre,P.apellido,c.fecha,c.horas from dbo.Estudiante P, dbo.Control C where c.idPasante=" + IdtextBox.Text + "and fecha between '" + DesdedateTimePicker.Value.ToString("yyyy-MM-dd") + "' and '" + HastadateTimePicker.Value.ToString("yyyy-MM-dd") + "' ";
+                 sql = "select C.idPasante,P.nombre,P.apellido,c.fecha,c.horas from dbo.Estudiante P, dbo.Control C where c.idPasante = P.id and c.idPasante=" + IdtextBox.Text + "and fecha between '" + DesdedateTimePicker.Value.ToString("yyyy-MM-dd") + "' and '" + HastadateTimePicker.Value.ToString("yyyy-MM-dd") + "' ";
+                //      sql = "select C.idPasante,P.nombre,P.apellido,c.fecha,c.horas from dbo.Estudiante P, dbo.Control C where c.idPasante=" + IdtextBox.Text + "and fecha between '" + DesdedateTimePicker.Value.ToString("yyyy-MM-dd") + "' and '" + HastadateTimePicker.Value.ToString("yyyy-MM-dd") + "' ";
                 da = new SqlDataAdapter(sql, con);
                 dt = new DataTable();
                 da.Fill(dt);
-                cr.SetDataSource(dt);
-             
-                report.crystalReportViewer.ReportSource = cr;
-                dgv.DataSource = dt;
+                dgv.DataSource = dt;    
             }
             catch (Exception ex)
             {
                 MessageBox.Show("No se pudo llenar el datagridview" + ex.ToString());
+            }
+            finally
+            {
+                con.Close();
             }
             return sql;
         }
@@ -66,10 +62,32 @@ namespace ProgramacionNCapas
 
         private void Imprimir_Click(object sender, EventArgs e)
         {
+           CargarReporte();
+        }
+
+        public void CargarReporte()
+        {
             VentanaReporte report = new VentanaReporte();
-            CrystalReport1 cr = new CrystalReport1();
+            Report1 cr = new Report1();
+            cr.SetDataSource(filtro());
             report.crystalReportViewer.ReportSource = cr;
-            report.Show();        
+            report.crystalReportViewer.Refresh();
+            report.Show();
+        }
+
+
+        public DataTable filtro()
+        {
+            string sql = "";
+
+            sql = "select C.idPasante,P.nombre,P.apellido,c.fecha,c.horas from dbo.Estudiante P, dbo.Control C where c.idPasante = P.id and c.idPasante=" + IdtextBox.Text + "and fecha between '" + DesdedateTimePicker.Value.ToString("yyyy-MM-dd") + "' and '" + HastadateTimePicker.Value.ToString("yyyy-MM-dd") + "' ";
+            da = new SqlDataAdapter(sql, con);
+            dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
         }
     }
+
 }
+
