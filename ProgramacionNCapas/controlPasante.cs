@@ -39,7 +39,6 @@ namespace ProgramacionNCapas
             l.Close();
         }
 
-
       public void validarId()
         {
             Conexion c = new Conexion();
@@ -47,13 +46,11 @@ namespace ProgramacionNCapas
                 MessageBox.Show("Id no existe!!!");
         }
 
-
         private void agregarButton_Click(object sender, EventArgs e)
         {
             Conexion c = new Conexion();
 
             //verificar si el textbox id esta vacio
-
             if (idEstudiante.Text == "")
             {
                 errorProvider.SetError(idEstudiante, "Campo Id Vacio!!!");
@@ -82,7 +79,6 @@ namespace ProgramacionNCapas
                         //agregar datos a la db
                      
                         c.insertarControl(Convert.ToInt32(idEstudiante.Text), fecha.Value, horaEntrada.Value, horaSalida.Value, horas/60);
-                       
                         MessageBox.Show("Guardado con Exito!!!","Guardado",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         c.ListadoControl(ControldataGridView);
                     }
@@ -94,6 +90,5 @@ namespace ProgramacionNCapas
         {
             errorProvider.SetError(idEstudiante, "");
         }
-
     }
 }

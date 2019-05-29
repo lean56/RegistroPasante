@@ -69,7 +69,15 @@ namespace ProgramacionNCapas
 
         private void Imprimir_Click(object sender, EventArgs e)
         {
-           CargarReporte();
+            if (IdtextBox.Text == "")
+            {
+                MyErrorProvider.SetError(IdtextBox, "Campo Id Vacio!!!");
+                IdtextBox.Focus();
+            }
+            else
+            {
+                CargarReporte();
+            }
         }
 
         public void CargarReporte()
@@ -81,7 +89,6 @@ namespace ProgramacionNCapas
             report.crystalReportViewer.Refresh();
             report.Show();
         }
-
 
         public DataTable filtro()
         {
@@ -106,6 +113,5 @@ namespace ProgramacionNCapas
             MyErrorProvider.SetError(IdtextBox, "");
         }
     }
-
 }
 

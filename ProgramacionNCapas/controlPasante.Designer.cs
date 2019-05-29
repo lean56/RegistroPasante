@@ -158,11 +158,11 @@
             // 
             this.agregarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(143)))), ((int)(((byte)(214)))));
             this.agregarButton.ForeColor = System.Drawing.Color.White;
-            this.agregarButton.Location = new System.Drawing.Point(343, 57);
+            this.agregarButton.Image = global::ProgramacionNCapas.Properties.Resources.ad_add_12868;
+            this.agregarButton.Location = new System.Drawing.Point(348, 29);
             this.agregarButton.Name = "agregarButton";
-            this.agregarButton.Size = new System.Drawing.Size(80, 30);
+            this.agregarButton.Size = new System.Drawing.Size(64, 58);
             this.agregarButton.TabIndex = 16;
-            this.agregarButton.Text = "Agregar";
             this.agregarButton.UseVisualStyleBackColor = false;
             this.agregarButton.Click += new System.EventHandler(this.agregarButton_Click);
             // 
