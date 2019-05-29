@@ -46,8 +46,8 @@ namespace ProgramacionNCapas
 
         private void estadoPasanteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EstadoPasante ep = new EstadoPasante();
-            ep.Show();
+           // EstadoPasante ep = new EstadoPasante();
+           // ep.Show();
         }
     }
 }

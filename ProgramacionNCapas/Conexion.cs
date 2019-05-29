@@ -52,13 +52,13 @@ namespace ProgramacionNCapas
             return salida;
         }        
 
-        public string insertarControl(int id ,DateTime fecha,DateTime horaEntrada,DateTime horaSalida,double horas,double horasR)
+        public string insertarControl(int id ,DateTime fecha,DateTime horaEntrada,DateTime horaSalida,double horas)
         {
             string salida = "";
             string sql = "";
             try
             {
-                sql = "Insert into Control(idPasante,fecha,horaEntrada,horaSalida,horas,horaRestante) values("+id+",'"+fecha.ToString("yyyyMMdd")+"','"+horaEntrada.ToString("hh:mm:ss")+"','"+horaSalida.ToString("hh:mm:ss")+"',"+horas+","+horasR+")";
+                sql = "Insert into Control(idPasante,fecha,horaEntrada,horaSalida,horas) values("+id+",'"+fecha.ToString("yyyyMMdd")+"','"+horaEntrada.ToString("hh:mm:ss")+"','"+horaSalida.ToString("hh:mm:ss")+"',"+horas+")";
                 cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
             }
@@ -94,7 +94,7 @@ namespace ProgramacionNCapas
         {
             try
             { 
-                da = new SqlDataAdapter("select idPasante AS'ID',fecha AS 'Fecha',horaEntrada AS 'Hora Entrada', horaSalida AS 'Hora Salida', horas AS 'Horas',horaRestante AS 'Horas Restante' from Control", con);
+                da = new SqlDataAdapter("select idPasante AS'ID',fecha AS 'Fecha',horaEntrada AS 'Hora Entrada', horaSalida AS 'Hora Salida', horas AS 'Horas' from Control", con);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;

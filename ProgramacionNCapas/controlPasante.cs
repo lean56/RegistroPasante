@@ -28,7 +28,7 @@ namespace ProgramacionNCapas
             ControldataGridView.Columns[2].DefaultCellStyle.Format = "hh:mm tt";
             ControldataGridView.Columns[3].DefaultCellStyle.Format="hh:mm tt";
 
-            c.llenacombobox(EstudiantecomboBox);
+          //  c.llenacombobox(EstudiantecomboBox);
         }
 
         private void buscarbutton_Click(object sender, EventArgs e)
@@ -78,10 +78,10 @@ namespace ProgramacionNCapas
                         DateTime fecha1 = Convert.ToDateTime(horaEntrada.Value);
                         DateTime fecha2 = Convert.ToDateTime(horaSalida.Value);
                         horas = Math.Round(fecha2.Subtract(fecha1).TotalMinutes, 1);
-                        horaRestante = 180 - (horas/60);
+                       
                         //agregar datos a la db
                      
-                        c.insertarControl(Convert.ToInt32(idEstudiante.Text), fecha.Value, horaEntrada.Value, horaSalida.Value, horas / 60, horaRestante);
+                        c.insertarControl(Convert.ToInt32(idEstudiante.Text), fecha.Value, horaEntrada.Value, horaSalida.Value, horas/60);
                        
                         MessageBox.Show("Guardado con Exito!!!","Guardado",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         c.ListadoControl(ControldataGridView);

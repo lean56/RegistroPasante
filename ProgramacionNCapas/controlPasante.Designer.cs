@@ -44,7 +44,6 @@
             this.f44 = new System.Windows.Forms.GroupBox();
             this.ControldataGridView = new System.Windows.Forms.DataGridView();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.EstudiantecomboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.f44.SuspendLayout();
@@ -101,16 +100,16 @@
             // 
             // idEstudiante
             // 
-            this.idEstudiante.Location = new System.Drawing.Point(102, 51);
+            this.idEstudiante.Location = new System.Drawing.Point(14, 45);
             this.idEstudiante.Name = "idEstudiante";
-            this.idEstudiante.Size = new System.Drawing.Size(57, 20);
+            this.idEstudiante.Size = new System.Drawing.Size(83, 20);
             this.idEstudiante.TabIndex = 11;
             this.idEstudiante.Validating += new System.ComponentModel.CancelEventHandler(this.idEstudiante_Validating);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 29);
+            this.label5.Location = new System.Drawing.Point(11, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 13);
             this.label5.TabIndex = 12;
@@ -118,13 +117,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.EstudiantecomboBox);
             this.groupBox1.Controls.Add(this.idEstudiante);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.buscarbutton);
             this.groupBox1.Location = new System.Drawing.Point(12, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(246, 100);
+            this.groupBox1.Size = new System.Drawing.Size(199, 100);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             // 
@@ -132,7 +130,7 @@
             // 
             this.buscarbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.buscarbutton.Image = global::ProgramacionNCapas.Properties.Resources.icons8_búsqueda_50;
-            this.buscarbutton.Location = new System.Drawing.Point(165, 29);
+            this.buscarbutton.Location = new System.Drawing.Point(110, 29);
             this.buscarbutton.Name = "buscarbutton";
             this.buscarbutton.Size = new System.Drawing.Size(75, 54);
             this.buscarbutton.TabIndex = 10;
@@ -150,9 +148,9 @@
             this.groupBox2.Controls.Add(this.fecha);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.horaSalida);
-            this.groupBox2.Location = new System.Drawing.Point(264, 15);
+            this.groupBox2.Location = new System.Drawing.Point(217, 15);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(442, 100);
+            this.groupBox2.Size = new System.Drawing.Size(441, 100);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             // 
@@ -181,9 +179,9 @@
             // f44
             // 
             this.f44.Controls.Add(this.ControldataGridView);
-            this.f44.Location = new System.Drawing.Point(37, 141);
+            this.f44.Location = new System.Drawing.Point(26, 137);
             this.f44.Name = "f44";
-            this.f44.Size = new System.Drawing.Size(669, 218);
+            this.f44.Size = new System.Drawing.Size(614, 218);
             this.f44.TabIndex = 15;
             this.f44.TabStop = false;
             // 
@@ -191,29 +189,21 @@
             // 
             this.ControldataGridView.BackgroundColor = System.Drawing.Color.White;
             this.ControldataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ControldataGridView.Location = new System.Drawing.Point(6, 16);
+            this.ControldataGridView.Location = new System.Drawing.Point(12, 16);
             this.ControldataGridView.Name = "ControldataGridView";
-            this.ControldataGridView.Size = new System.Drawing.Size(656, 196);
+            this.ControldataGridView.Size = new System.Drawing.Size(591, 196);
             this.ControldataGridView.TabIndex = 9;
             // 
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
             // 
-            // EstudiantecomboBox
-            // 
-            this.EstudiantecomboBox.FormattingEnabled = true;
-            this.EstudiantecomboBox.Location = new System.Drawing.Point(13, 50);
-            this.EstudiantecomboBox.Name = "EstudiantecomboBox";
-            this.EstudiantecomboBox.Size = new System.Drawing.Size(66, 21);
-            this.EstudiantecomboBox.TabIndex = 16;
-            // 
             // controlPasante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(143)))), ((int)(((byte)(214)))));
-            this.ClientSize = new System.Drawing.Size(731, 384);
+            this.ClientSize = new System.Drawing.Size(693, 384);
             this.Controls.Add(this.f44);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -248,6 +238,5 @@
         public System.Windows.Forms.TextBox idEstudiante;
         public System.Windows.Forms.DateTimePicker horaEntrada;
         private System.Windows.Forms.ErrorProvider errorProvider;
-        private System.Windows.Forms.ComboBox EstudiantecomboBox;
     }
 }

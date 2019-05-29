@@ -38,8 +38,6 @@ namespace ProgramacionNCapas
             try
             {
                 sql = "select C.idPasante,P.nombre,P.apellido,c.fecha,c.horas from dbo.Estudiante P, dbo.Control C where c.idPasante = P.id and c.idPasante=" + IdtextBox.Text + "and fecha between '" + DesdedateTimePicker.Value.ToString("yyyy-MM-dd") + "' and '" + HastadateTimePicker.Value.ToString("yyyy-MM-dd") + "' ";
-               
-                //      sql = "select C.idPasante,P.nombre,P.apellido,c.fecha,c.horas from dbo.Estudiante P, dbo.Control C where c.idPasante=" + IdtextBox.Text + "and fecha between '" + DesdedateTimePicker.Value.ToString("yyyy-MM-dd") + "' and '" + HastadateTimePicker.Value.ToString("yyyy-MM-dd") + "' ";
                 da = new SqlDataAdapter(sql, con);
                 dt = new DataTable();
                 da.Fill(dt);
@@ -56,9 +54,17 @@ namespace ProgramacionNCapas
             return sql;
         }
 
-        private void Reportebutton_Click(object sender, EventArgs e)
+        private void Reportebutton_Click_1(object sender, EventArgs e)
         {
-            reporte(ReportedataGridView);
+            if (IdtextBox.Text == "")
+            {
+                MyErrorProvider.SetError(IdtextBox, "Campo Id Vacio!!!");
+                IdtextBox.Focus();
+            }
+            else
+            {
+                reporte(ReportedataGridView);
+            }
         }
 
         private void Imprimir_Click(object sender, EventArgs e)
@@ -85,6 +91,19 @@ namespace ProgramacionNCapas
             dt = new DataTable();
             da.Fill(dt);
             return dt;
+        }
+
+        private void buscarbutton_Click_1(object sender, EventArgs e)
+        {
+            Listado l = new Listado();
+            l.ShowDialog();
+            IdtextBox.Text = l.ID.ToString();
+            l.Close();
+        }
+
+        private void IdtextBox_TextChanged_1(object sender, EventArgs e)
+        {
+            MyErrorProvider.SetError(IdtextBox, "");
         }
     }
 

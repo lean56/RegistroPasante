@@ -63,6 +63,16 @@ namespace ProgramacionNCapas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ad_add_12868 {
+            get {
+                object obj = ResourceManager.GetObject("ad_add_12868", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cancel_icon_icons_com_73703 {
             get {
                 object obj = ResourceManager.GetObject("Cancel_icon-icons.com_73703", resourceCulture);
@@ -123,6 +133,16 @@ namespace ProgramacionNCapas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mimetypes_PostScript_theprinter_349 {
+            get {
+                object obj = ResourceManager.GetObject("mimetypes_PostScript_theprinter_349", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap New_file_icon {
             get {
                 object obj = ResourceManager.GetObject("New-file-icon", resourceCulture);
@@ -156,6 +176,16 @@ namespace ProgramacionNCapas.Properties {
         internal static System.Drawing.Bitmap printer_78349 {
             get {
                 object obj = ResourceManager.GetObject("printer_78349", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap view_search_find_9565 {
+            get {
+                object obj = ResourceManager.GetObject("view_search_find_9565", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -282,5 +282,14 @@
   <ItemGroup>
     <None Include="Resources\printer_78349.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_search_find_9565.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mimetypes_PostScript_theprinter_349.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ad_add_12868.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
