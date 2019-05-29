@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.crystalReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.CrystalReport11 = new ProgramacionNCapas.CrystalReport1();
-            this.CrystalReport1 = new ProgramacionNCapas.CrystalReport();
             this.Report11 = new ProgramacionNCapas.Report1();
             this.SuspendLayout();
             // 
@@ -59,9 +57,7 @@
         }
 
         #endregion
-        private CrystalReport CrystalReport1;
         public CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer;
-        private CrystalReport1 CrystalReport11;
         private Report1 Report11;
     }
 }

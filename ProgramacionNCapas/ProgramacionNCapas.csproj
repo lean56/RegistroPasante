@@ -77,18 +77,6 @@
     <Compile Include="controlPasante.Designer.cs">
       <DependentUpon>controlPasante.cs</DependentUpon>
     </Compile>
-    <Compile Include="CrystalReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CrystalReport1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="EstadoPasante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,12 +127,6 @@
     <Compile Include="Reporte.Designer.cs">
       <DependentUpon>Reporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportePasantes.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReportePasantes.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="VentanaEstadoPasante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,22 +139,8 @@
     <Compile Include="VentanaReporte.Designer.cs">
       <DependentUpon>VentanaReporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="VisorReporte.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VisorReporte.Designer.cs">
-      <DependentUpon>VisorReporte.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="controlPasante.resx">
       <DependentUpon>controlPasante.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="EstadoPasante.resx">
       <DependentUpon>EstadoPasante.cs</DependentUpon>
@@ -210,18 +178,11 @@
     <EmbeddedResource Include="Reporte.resx">
       <DependentUpon>Reporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportePasantes.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>ReportePasantes.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="VentanaEstadoPasante.resx">
       <DependentUpon>VentanaEstadoPasante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaReporte.resx">
       <DependentUpon>VentanaReporte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VisorReporte.resx">
-      <DependentUpon>VisorReporte.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="login.config" />
     <None Include="Properties\Settings.settings">
