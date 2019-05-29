@@ -13,7 +13,7 @@ namespace ProgramacionNCapas
 {
     public partial class controlPasante : Form
     {
-        double horas,horaRestante;
+        double horas,horaRestante,total;
         
         public controlPasante()
         {
@@ -80,7 +80,9 @@ namespace ProgramacionNCapas
                         horas = Math.Round(fecha2.Subtract(fecha1).TotalMinutes, 1);
                         horaRestante = 180 - (horas/60);
                         //agregar datos a la db
+                     
                         c.insertarControl(Convert.ToInt32(idEstudiante.Text), fecha.Value, horaEntrada.Value, horaSalida.Value, horas / 60, horaRestante);
+                       
                         MessageBox.Show("Guardado con Exito!!!","Guardado",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         c.ListadoControl(ControldataGridView);
                     }
