@@ -67,12 +67,12 @@ namespace ProgramacionNCapas
                 }                  
                 else
                 {
-                    if (horaEntrada.Value == DateTime.Now || horaSalida.Value < DateTime.Now)//la hora de entrada tiene que ser mayor que la de salida
-                    {
-                        MessageBox.Show("La hora salida debe ser mayor a la hora de entrada","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
+              //     if (horaEntrada.Value == DateTime.Now || horaSalida.Value < DateTime.Now)//la hora de /entrada tiene que ser mayor que la de salida
+                //   {
+                     //   MessageBox.Show("La hora salida debe ser mayor a la hora de entrada","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                  //  }
+                   // else
+                   // {
                         RegistroPasante rp = new RegistroPasante();
                         //Para restar 2 las horas
                         DateTime fecha1 = Convert.ToDateTime(horaEntrada.Value);
@@ -86,7 +86,7 @@ namespace ProgramacionNCapas
                         c.ListadoControl(ControldataGridView, Convert.ToInt32(idEstudiante.Text));
                         ControldataGridView.Columns[2].DefaultCellStyle.Format = "hh:mm:ss";
                         ControldataGridView.Columns[3].DefaultCellStyle.Format="hh:mm:ss";
-                    }
+                //    }
                 }
             }
         }

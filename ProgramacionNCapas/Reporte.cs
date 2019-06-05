@@ -56,6 +56,7 @@ namespace ProgramacionNCapas
 
         private void Reportebutton_Click_1(object sender, EventArgs e)
         {
+            Conexion c = new Conexion();
             if (IdtextBox.Text == "")
             {
                 MyErrorProvider.SetError(IdtextBox, "Campo Id Vacio!!!");
@@ -63,8 +64,19 @@ namespace ProgramacionNCapas
             }
             else
             {
-                reporte(ReportedataGridView);
+                if (!c.Existe(Convert.ToInt32(IdtextBox.Text)))
+                {
+                    MyErrorProvider.SetError(IdtextBox, "Id no Existe!!!");
+                    IdtextBox.Focus();
+                    // MessageBox.Show("Id no existe!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    reporte(ReportedataGridView);
+                    MyErrorProvider.Clear();
+                }
             }
+          
         }
 
         private void Imprimir_Click(object sender, EventArgs e)

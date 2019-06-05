@@ -84,9 +84,6 @@
       <DependentUpon>EstadoPasante.cs</DependentUpon>
     </Compile>
     <Compile Include="EstadoPasanteReport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EstadoPasanteReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Listado.cs">
@@ -94,12 +91,6 @@
     </Compile>
     <Compile Include="Listado.Designer.cs">
       <DependentUpon>Listado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -151,15 +142,8 @@
     <EmbeddedResource Include="EstadoPasante.resx">
       <DependentUpon>EstadoPasante.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EstadoPasanteReport.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>EstadoPasanteReport.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Listado.resx">
       <DependentUpon>Listado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
@@ -293,6 +277,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\businessapplication_distributor_report_document_negocio_2319.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
