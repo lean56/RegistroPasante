@@ -49,5 +49,11 @@ namespace ProgramacionNCapas
            // EstadoPasante ep = new EstadoPasante();
            // ep.Show();
         }
+
+        private void dToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Principal p = new Principal();
+            p.Show();
+        }
     }
 }

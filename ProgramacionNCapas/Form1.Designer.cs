@@ -35,6 +35,7 @@
             this.controlPasanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteListadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +53,8 @@
             // 
             // archivoToolStripMenuItem
             // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
@@ -90,9 +93,16 @@
             // reporteListadoToolStripMenuItem
             // 
             this.reporteListadoToolStripMenuItem.Name = "reporteListadoToolStripMenuItem";
-            this.reporteListadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reporteListadoToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.reporteListadoToolStripMenuItem.Text = "Estado Pasante";
             this.reporteListadoToolStripMenuItem.Click += new System.EventHandler(this.reporteListadoToolStripMenuItem_Click);
+            // 
+            // dToolStripMenuItem
+            // 
+            this.dToolStripMenuItem.Name = "dToolStripMenuItem";
+            this.dToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dToolStripMenuItem.Text = "d";
+            this.dToolStripMenuItem.Click += new System.EventHandler(this.dToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -119,6 +129,7 @@
         private System.Windows.Forms.ToolStripMenuItem reporteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteListadoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem controlPasanteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dToolStripMenuItem;
     }
 }
 

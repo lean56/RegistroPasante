@@ -13,7 +13,7 @@ namespace ProgramacionNCapas
 {
     public partial class controlPasante : Form
     {
-        double horas,horaRestante,total;
+        double horas;
         
         public controlPasante()
         {
@@ -27,8 +27,6 @@ namespace ProgramacionNCapas
             c.ListadoControl(ControldataGridView);
             ControldataGridView.Columns[2].DefaultCellStyle.Format = "hh:mm tt";
             ControldataGridView.Columns[3].DefaultCellStyle.Format="hh:mm tt";
-
-          //  c.llenacombobox(EstudiantecomboBox);
         }
 
         private void buscarbutton_Click(object sender, EventArgs e)
@@ -44,6 +42,11 @@ namespace ProgramacionNCapas
             Conexion c = new Conexion();
             if (!c.Existe(Convert.ToInt32(idEstudiante.Text)))
                 MessageBox.Show("Id no existe!!!");
+        }
+
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void agregarButton_Click(object sender, EventArgs e)
@@ -63,8 +66,8 @@ namespace ProgramacionNCapas
                     MessageBox.Show("Id no existe!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }         
                else
-                {   
-                    if (horaEntrada.Value > horaSalida.Value)
+                {  
+                    if (horaEntrada.Value == DateTime.Now || horaSalida.Value < DateTime.Now)//la hora de entrada tiene que ser mayor que la de salida
                     {
                         MessageBox.Show("La hora salida debe ser mayor a la hora de entrada","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }

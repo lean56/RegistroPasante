@@ -112,6 +112,11 @@ namespace ProgramacionNCapas
         {
             MyErrorProvider.SetError(IdtextBox, "");
         }
+
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Imprimir = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.buscarbutton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.Desde = new System.Windows.Forms.Label();
@@ -45,6 +45,9 @@
             this.ID = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.ReportedataGridView = new System.Windows.Forms.DataGridView();
+            this.Imprimir = new System.Windows.Forms.Button();
+            this.CerrarButton = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -55,20 +58,9 @@
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
-            // Imprimir
-            // 
-            this.Imprimir.Image = global::ProgramacionNCapas.Properties.Resources.mimetypes_PostScript_theprinter_349;
-            this.Imprimir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Imprimir.Location = new System.Drawing.Point(507, 280);
-            this.Imprimir.Name = "Imprimir";
-            this.Imprimir.Size = new System.Drawing.Size(62, 71);
-            this.Imprimir.TabIndex = 15;
-            this.Imprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Imprimir.UseVisualStyleBackColor = true;
-            this.Imprimir.Click += new System.EventHandler(this.Imprimir_Click);
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.buscarbutton);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.Desde);
@@ -77,11 +69,20 @@
             this.groupBox1.Controls.Add(this.DesdedateTimePicker);
             this.groupBox1.Controls.Add(this.IdtextBox);
             this.groupBox1.Controls.Add(this.ID);
-            this.groupBox1.Location = new System.Drawing.Point(24, 12);
+            this.groupBox1.Location = new System.Drawing.Point(168, 94);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(545, 79);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(481, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Reporte";
             // 
             // buscarbutton
             // 
@@ -115,11 +116,11 @@
             // 
             // Reportebutton
             // 
-            this.Reportebutton.Location = new System.Drawing.Point(457, 39);
+            this.Reportebutton.Image = global::ProgramacionNCapas.Properties.Resources.checkform_85890;
+            this.Reportebutton.Location = new System.Drawing.Point(478, 10);
             this.Reportebutton.Name = "Reportebutton";
-            this.Reportebutton.Size = new System.Drawing.Size(75, 23);
+            this.Reportebutton.Size = new System.Drawing.Size(53, 57);
             this.Reportebutton.TabIndex = 23;
-            this.Reportebutton.Text = "Reporte";
             this.Reportebutton.UseVisualStyleBackColor = true;
             this.Reportebutton.Click += new System.EventHandler(this.Reportebutton_Click_1);
             // 
@@ -158,7 +159,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.ReportedataGridView);
-            this.groupBox2.Location = new System.Drawing.Point(24, 97);
+            this.groupBox2.Location = new System.Drawing.Point(168, 179);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(545, 177);
             this.groupBox2.TabIndex = 20;
@@ -166,44 +167,81 @@
             // 
             // ReportedataGridView
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ReportedataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ReportedataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.ReportedataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ReportedataGridView.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ReportedataGridView.DefaultCellStyle = dataGridViewCellStyle14;
             this.ReportedataGridView.Location = new System.Drawing.Point(12, 15);
             this.ReportedataGridView.Name = "ReportedataGridView";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ReportedataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ReportedataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.ReportedataGridView.Size = new System.Drawing.Size(519, 150);
             this.ReportedataGridView.TabIndex = 15;
+            // 
+            // Imprimir
+            // 
+            this.Imprimir.Image = global::ProgramacionNCapas.Properties.Resources.mimetypes_PostScript_theprinter_349;
+            this.Imprimir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Imprimir.Location = new System.Drawing.Point(651, 362);
+            this.Imprimir.Name = "Imprimir";
+            this.Imprimir.Size = new System.Drawing.Size(62, 71);
+            this.Imprimir.TabIndex = 15;
+            this.Imprimir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Imprimir.UseVisualStyleBackColor = true;
+            this.Imprimir.Click += new System.EventHandler(this.Imprimir_Click);
+            // 
+            // CerrarButton
+            // 
+            this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CerrarButton.AutoSize = true;
+            this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CerrarButton.Location = new System.Drawing.Point(922, 9);
+            this.CerrarButton.Name = "CerrarButton";
+            this.CerrarButton.Size = new System.Drawing.Size(17, 17);
+            this.CerrarButton.TabIndex = 32;
+            this.CerrarButton.Text = "X";
+            this.CerrarButton.Click += new System.EventHandler(this.CerrarButton_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 25F);
+            this.label2.Location = new System.Drawing.Point(363, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 41);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Reporte";
             // 
             // Reporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 363);
+            this.ClientSize = new System.Drawing.Size(951, 551);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.CerrarButton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Imprimir);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Reporte";
             this.Text = "Reporte";
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
@@ -212,6 +250,7 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ReportedataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -229,5 +268,8 @@
         private System.Windows.Forms.DateTimePicker DesdedateTimePicker;
         private System.Windows.Forms.TextBox IdtextBox;
         private System.Windows.Forms.Label ID;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label CerrarButton;
+        private System.Windows.Forms.Label label2;
     }
 }

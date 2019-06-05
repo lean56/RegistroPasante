@@ -107,6 +107,12 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistroPasante.cs">
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -251,6 +260,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ad_add_12868.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics_118088.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkform_85890.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close Window_ 2 48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximize Window_2 48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restore Window 2_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize Window_2 48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Businessman_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taskboardhd_106120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taskboardhd_106120 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessapplication_distributor_report_document_negocio_2319.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

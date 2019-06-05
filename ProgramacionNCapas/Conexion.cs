@@ -22,7 +22,6 @@ namespace ProgramacionNCapas
             try
             {
                 con = new SqlConnection("Data Source=.\\SQLEXPRESS; Initial Catalog=ControlPasantiaDb; Integrated Security=True");
-                //con = new SqlConnection("Data Source =EMIL56\\SQLEXPRESS; Initial Catalog = ControlPasantia; User ID = emil; Password = 5656");
                 con.Open();
             }
             catch(Exception ex)
@@ -73,8 +72,6 @@ namespace ProgramacionNCapas
             return salida;
         }
 
-        //..................
-
         public void ListadoPasante(DataGridView dgv)
         {
             try
@@ -105,7 +102,6 @@ namespace ProgramacionNCapas
             }
         }
 
-
         public bool Existe(int id)
         {
             bool paso = false;
@@ -121,7 +117,6 @@ namespace ProgramacionNCapas
                     return false;
                 else
                     return true;
-
             }
             catch (Exception)
             {
@@ -129,7 +124,6 @@ namespace ProgramacionNCapas
             }
             return paso;
         }
-
 
         public string Reporte(int id)
         {
@@ -147,13 +141,6 @@ namespace ProgramacionNCapas
             return paso;
         }
 
-
-        //
-
-
-        //command = new MySqlCommand(string.Format("SELECT CodigoProducto, Descripcion,Precio ,Cantidad,  Provedor, FechaVencimiento FROM Producto where date_sub(FechaVencimiento, interval 30 day) <= curdate()"), conn);
-
-
         public void llenacombobox(ComboBox cb)
         {
             try
@@ -161,9 +148,7 @@ namespace ProgramacionNCapas
                 da = new SqlDataAdapter("select id,nombre AS 'Nombre' from Estudiante ", con);
 
                 DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
+                da.Fill(dt);        
                 cb.ValueMember = "ID";
                 cb.DisplayMember = "Nombre";
                 cb.DataSource = dt;
@@ -174,7 +159,7 @@ namespace ProgramacionNCapas
             }
         }
 
-    public void logins(string usuario,string pass)
+        public void logins(string usuario,string pass)
         {
             try
             {
@@ -186,7 +171,6 @@ namespace ProgramacionNCapas
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }
 

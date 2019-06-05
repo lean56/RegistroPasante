@@ -83,5 +83,10 @@ namespace ProgramacionNCapas
         {
             Close();
         }
+
+        private void CerrarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

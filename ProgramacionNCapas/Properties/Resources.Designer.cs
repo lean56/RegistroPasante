@@ -73,6 +73,36 @@ namespace ProgramacionNCapas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap analytics_118088 {
+            get {
+                object obj = ResourceManager.GetObject("analytics_118088", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap businessapplication_distributor_report_document_negocio_2319 {
+            get {
+                object obj = ResourceManager.GetObject("businessapplication_distributor_report_document_negocio_2319", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Businessman_48px {
+            get {
+                object obj = ResourceManager.GetObject("Businessman_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cancel_icon_icons_com_73703 {
             get {
                 object obj = ResourceManager.GetObject("Cancel_icon-icons.com_73703", resourceCulture);
@@ -86,6 +116,26 @@ namespace ProgramacionNCapas.Properties {
         internal static System.Drawing.Bitmap Cancel_icon_icons_com_73703__1_ {
             get {
                 object obj = ResourceManager.GetObject("Cancel_icon-icons.com_73703 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checkform_85890 {
+            get {
+                object obj = ResourceManager.GetObject("checkform_85890", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Close_Window__2_48px {
+            get {
+                object obj = ResourceManager.GetObject("Close Window_ 2 48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +183,39 @@ namespace ProgramacionNCapas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Maximize_Window_2_48px {
+            get {
+                object obj = ResourceManager.GetObject("Maximize Window_2 48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Menu_48px {
+            get {
+                object obj = ResourceManager.GetObject("Menu_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mimetypes_PostScript_theprinter_349 {
             get {
                 object obj = ResourceManager.GetObject("mimetypes_PostScript_theprinter_349", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minimize_Window_2_48px {
+            get {
+                object obj = ResourceManager.GetObject("Minimize Window_2 48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +256,36 @@ namespace ProgramacionNCapas.Properties {
         internal static System.Drawing.Bitmap printer_78349 {
             get {
                 object obj = ResourceManager.GetObject("printer_78349", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Restore_Window_2_48px {
+            get {
+                object obj = ResourceManager.GetObject("Restore Window 2_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap taskboardhd_106120 {
+            get {
+                object obj = ResourceManager.GetObject("taskboardhd_106120", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap taskboardhd_106120__1_ {
+            get {
+                object obj = ResourceManager.GetObject("taskboardhd_106120 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

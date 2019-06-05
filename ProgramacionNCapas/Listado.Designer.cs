@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.listadodataGridView = new System.Windows.Forms.DataGridView();
             this.BtnCargar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -38,15 +38,15 @@
             // 
             // listadodataGridView
             // 
-            this.listadodataGridView.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.listadodataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.listadodataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.listadodataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.listadodataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listadodataGridView.Location = new System.Drawing.Point(7, 12);
             this.listadodataGridView.Name = "listadodataGridView";
@@ -56,9 +56,9 @@
             // 
             // BtnCargar
             // 
-            this.BtnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(143)))), ((int)(((byte)(214)))));
-            this.BtnCargar.ForeColor = System.Drawing.Color.White;
-            this.BtnCargar.Location = new System.Drawing.Point(30, 251);
+            this.BtnCargar.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnCargar.ForeColor = System.Drawing.Color.Black;
+            this.BtnCargar.Location = new System.Drawing.Point(508, 280);
             this.BtnCargar.Name = "BtnCargar";
             this.BtnCargar.Size = new System.Drawing.Size(75, 30);
             this.BtnCargar.TabIndex = 6;
@@ -69,7 +69,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.listadodataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(30, 28);
+            this.groupBox1.Location = new System.Drawing.Point(42, 40);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(666, 217);
             this.groupBox1.TabIndex = 7;
@@ -79,13 +79,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(143)))), ((int)(((byte)(214)))));
-            this.ClientSize = new System.Drawing.Size(708, 293);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(746, 325);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnCargar);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(143)))), ((int)(((byte)(214)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Listado";
-            this.Text = "Control";
+            this.Text = "Listado Pasante";
             this.Load += new System.EventHandler(this.Listado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listadodataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);

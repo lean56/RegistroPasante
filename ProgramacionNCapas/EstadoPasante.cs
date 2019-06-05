@@ -17,9 +17,6 @@ namespace ProgramacionNCapas
         SqlDataAdapter da;
         DataTable dt;
 
-     //  VentanaEstadoPasante report = new VentanaEstadoPasante();
-      //  EstadoPasanteReport cr = new EstadoPasanteReport();
-
         public EstadoPasante()
         {
             InitializeComponent();
@@ -51,13 +48,6 @@ namespace ProgramacionNCapas
 
                 report.crystalReportViewer1.ReportSource = cr;
                 dgv.DataSource = dt;
-
-                /*
-                  VentanaReporte rp = new VentanaReporte();
-                cr.SetDataSource(dt);
-             
-                rp.crystalReportViewer.ReportSource = cr;
-                 */
 
             }
             catch (Exception ex)

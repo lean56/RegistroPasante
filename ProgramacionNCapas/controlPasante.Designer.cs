@@ -44,6 +44,8 @@
             this.f44 = new System.Windows.Forms.GroupBox();
             this.ControldataGridView = new System.Windows.Forms.DataGridView();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CerrarButton = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.f44.SuspendLayout();
@@ -54,18 +56,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(15, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Fecha";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(119, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.Size = new System.Drawing.Size(105, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Hora Entrada";
             // 
@@ -82,9 +86,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(232, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.Size = new System.Drawing.Size(93, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Hora Salida";
             // 
@@ -109,9 +114,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 29);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 24);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 13);
+            this.label5.Size = new System.Drawing.Size(85, 17);
             this.label5.TabIndex = 12;
             this.label5.Text = "Estudiante";
             // 
@@ -120,7 +126,7 @@
             this.groupBox1.Controls.Add(this.idEstudiante);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.buscarbutton);
-            this.groupBox1.Location = new System.Drawing.Point(12, 15);
+            this.groupBox1.Location = new System.Drawing.Point(191, 86);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(199, 100);
             this.groupBox1.TabIndex = 13;
@@ -128,7 +134,9 @@
             // 
             // buscarbutton
             // 
+            this.buscarbutton.BackColor = System.Drawing.SystemColors.Control;
             this.buscarbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buscarbutton.Image = global::ProgramacionNCapas.Properties.Resources.icons8_búsqueda_50;
             this.buscarbutton.Location = new System.Drawing.Point(110, 29);
             this.buscarbutton.Name = "buscarbutton";
@@ -136,7 +144,7 @@
             this.buscarbutton.TabIndex = 10;
             this.buscarbutton.Text = "Buscar";
             this.buscarbutton.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.buscarbutton.UseVisualStyleBackColor = true;
+            this.buscarbutton.UseVisualStyleBackColor = false;
             this.buscarbutton.Click += new System.EventHandler(this.buscarbutton_Click);
             // 
             // groupBox2
@@ -148,7 +156,7 @@
             this.groupBox2.Controls.Add(this.fecha);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.horaSalida);
-            this.groupBox2.Location = new System.Drawing.Point(217, 15);
+            this.groupBox2.Location = new System.Drawing.Point(396, 86);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(441, 100);
             this.groupBox2.TabIndex = 14;
@@ -156,7 +164,7 @@
             // 
             // agregarButton
             // 
-            this.agregarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(143)))), ((int)(((byte)(214)))));
+            this.agregarButton.BackColor = System.Drawing.SystemColors.Control;
             this.agregarButton.ForeColor = System.Drawing.Color.White;
             this.agregarButton.Image = global::ProgramacionNCapas.Properties.Resources.ad_add_12868;
             this.agregarButton.Location = new System.Drawing.Point(348, 29);
@@ -179,7 +187,7 @@
             // f44
             // 
             this.f44.Controls.Add(this.ControldataGridView);
-            this.f44.Location = new System.Drawing.Point(26, 137);
+            this.f44.Location = new System.Drawing.Point(205, 208);
             this.f44.Name = "f44";
             this.f44.Size = new System.Drawing.Size(614, 218);
             this.f44.TabIndex = 15;
@@ -198,15 +206,40 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // CerrarButton
+            // 
+            this.CerrarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CerrarButton.AutoSize = true;
+            this.CerrarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CerrarButton.Location = new System.Drawing.Point(922, 9);
+            this.CerrarButton.Name = "CerrarButton";
+            this.CerrarButton.Size = new System.Drawing.Size(17, 17);
+            this.CerrarButton.TabIndex = 31;
+            this.CerrarButton.Text = "X";
+            this.CerrarButton.Click += new System.EventHandler(this.CerrarButton_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Monotype Corsiva", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(400, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(231, 41);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Registro de Horas";
+            // 
             // controlPasante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(143)))), ((int)(((byte)(214)))));
-            this.ClientSize = new System.Drawing.Size(693, 384);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(951, 551);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.CerrarButton);
             this.Controls.Add(this.f44);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "controlPasante";
             this.Text = "Control Pasante";
             this.Load += new System.EventHandler(this.controlPasante_Load);
@@ -218,6 +251,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ControldataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -238,5 +272,7 @@
         public System.Windows.Forms.TextBox idEstudiante;
         public System.Windows.Forms.DateTimePicker horaEntrada;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Label CerrarButton;
+        private System.Windows.Forms.Label label4;
     }
 }
