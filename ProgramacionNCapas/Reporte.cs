@@ -37,7 +37,7 @@ namespace ProgramacionNCapas
             string sql = "";
             try
             {
-                sql = "select C.idPasante,P.nombre,P.apellido,c.fecha,c.horas from dbo.Estudiante P, dbo.Control C where c.idPasante = P.id and c.idPasante=" + IdtextBox.Text + "and fecha between '" + DesdedateTimePicker.Value.ToString("yyyy-MM-dd") + "' and '" + HastadateTimePicker.Value.ToString("yyyy-MM-dd") + "' ";
+                sql = "select C.idPasante AS ID,P.nombre AS Nombre,P.apellido AS Apellido,c.fecha AS Fecha,c.horas AS Horas from dbo.Estudiante P, dbo.Control C where c.idPasante = P.id and c.idPasante=" + IdtextBox.Text + "and fecha between '" + DesdedateTimePicker.Value.ToString("yyyy-MM-dd") + "' and '" + HastadateTimePicker.Value.ToString("yyyy-MM-dd") + "' ";
                 da = new SqlDataAdapter(sql, con);
                 dt = new DataTable();
                 da.Fill(dt);
@@ -92,20 +92,35 @@ namespace ProgramacionNCapas
 
         public DataTable filtro()
         {
-            string sql = ""; 
-            sql = "select C.idPasante,P.nombre,P.apellido,c.fecha,c.horas,c.horaEntrada,c.horaSalida from dbo.Estudiante P, dbo.Control C where c.idPasante = P.id and c.idPasante=" + IdtextBox.Text + "and fecha between '" + DesdedateTimePicker.Value.ToString("yyyy-MM-dd") + "' and '" + HastadateTimePicker.Value.ToString("yyyy-MM-dd") + "' ";
-            da = new SqlDataAdapter(sql, con);
-            dt = new DataTable();
-            da.Fill(dt);
+            try
+            {
+                string sql = "";
+                sql = "select C.idPasante,P.nombre,P.apellido,c.fecha,c.horas,c.horaEntrada,c.horaSalida from dbo.Estudiante P, dbo.Control C where c.idPasante = P.id and c.idPasante=" + IdtextBox.Text + "and fecha between '" + DesdedateTimePicker.Value.ToString("yyyy-MM-dd") + "' and '" + HastadateTimePicker.Value.ToString("yyyy-MM-dd") + "' ";
+                da = new SqlDataAdapter(sql, con);
+                dt = new DataTable();
+                da.Fill(dt);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
             return dt;
         }
 
         private void buscarbutton_Click_1(object sender, EventArgs e)
         {
-            Listado l = new Listado();
-            l.ShowDialog();
-            IdtextBox.Text = l.ID.ToString();
-            l.Close();
+            try
+            {
+                Listado l = new Listado();
+                l.ShowDialog();
+                IdtextBox.Text = l.ID.ToString();
+                l.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
         }
 
         private void IdtextBox_TextChanged_1(object sender, EventArgs e)

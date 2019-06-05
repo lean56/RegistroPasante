@@ -89,11 +89,11 @@ namespace ProgramacionNCapas
             }
         }
 
-        public void ListadoControl(DataGridView dgv)
+        public void ListadoControl(DataGridView dgv,int id)
         {
             try
             { 
-                da = new SqlDataAdapter("select idPasante AS'ID',fecha AS 'Fecha',horaEntrada AS 'Hora Entrada', horaSalida AS 'Hora Salida', horas AS 'Horas' from Control", con);
+                da = new SqlDataAdapter("select idPasante AS'ID',fecha AS 'Fecha',horaEntrada AS 'Hora Entrada', horaSalida AS 'Hora Salida', horas AS 'Horas' from Control where idPasante ="+id+"", con);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;

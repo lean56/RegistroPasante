@@ -24,9 +24,9 @@ namespace ProgramacionNCapas
         {
             Conexion c = new Conexion();
 
-            c.ListadoControl(ControldataGridView);
-            ControldataGridView.Columns[2].DefaultCellStyle.Format = "hh:mm tt";
-            ControldataGridView.Columns[3].DefaultCellStyle.Format="hh:mm tt";
+           // c.ListadoControl(ControldataGridView);
+           // ControldataGridView.Columns[2].DefaultCellStyle.Format = "hh:mm tt";
+           // ControldataGridView.Columns[3].DefaultCellStyle.Format="hh:mm tt";
         }
 
         private void buscarbutton_Click(object sender, EventArgs e)
@@ -83,7 +83,9 @@ namespace ProgramacionNCapas
                      
                         c.insertarControl(Convert.ToInt32(idEstudiante.Text), fecha.Value, horaEntrada.Value, horaSalida.Value, horas/60);
                         MessageBox.Show("Guardado con Exito!!!","Guardado",MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        c.ListadoControl(ControldataGridView);
+                        c.ListadoControl(ControldataGridView, Convert.ToInt32(idEstudiante.Text));
+                        ControldataGridView.Columns[2].DefaultCellStyle.Format = "hh:mm:ss";
+                        ControldataGridView.Columns[3].DefaultCellStyle.Format="hh:mm:ss";
                     }
                 }
             }
