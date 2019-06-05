@@ -49,7 +49,9 @@ namespace ProgramacionNCapas
                 con.Close();
             }
             return salida;
-        }        
+        }
+
+    
 
         public string insertarControl(int id ,DateTime fecha,DateTime horaEntrada,DateTime horaSalida,double horas)
         {
@@ -101,7 +103,7 @@ namespace ProgramacionNCapas
                 MessageBox.Show("No se pudo llenar el datagridview" + ex.ToString());
             }
         }
-
+     
         public bool Existe(int id)
         {
             bool paso = false;
@@ -121,6 +123,23 @@ namespace ProgramacionNCapas
             catch (Exception)
             {
 
+            }
+            return paso;
+        }
+
+        public string Eliminar()
+        {
+            string paso = "";
+            try
+            {
+                cmd = new SqlCommand("delete from Control where idPasante= @ID", con);
+               // cmd.Parameters.AddWithValue("@idPasante");
+
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return paso;
         }

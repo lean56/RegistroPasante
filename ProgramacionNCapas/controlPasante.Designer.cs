@@ -46,6 +46,7 @@
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.CerrarButton = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.f44.SuspendLayout();
@@ -228,12 +229,23 @@
             this.label4.TabIndex = 32;
             this.label4.Text = "Registro de Horas";
             // 
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.Location = new System.Drawing.Point(205, 449);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Eliminarbutton.TabIndex = 33;
+            this.Eliminarbutton.Text = "button1";
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
             // controlPasante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(951, 551);
+            this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.CerrarButton);
             this.Controls.Add(this.f44);
@@ -274,5 +286,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Label CerrarButton;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button Eliminarbutton;
     }
 }

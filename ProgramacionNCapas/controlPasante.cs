@@ -64,9 +64,9 @@ namespace ProgramacionNCapas
                 if (!c.Existe(Convert.ToInt32(idEstudiante.Text)))
                 {
                     MessageBox.Show("Id no existe!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }         
-               else
-                {  
+                }                  
+                else
+                {
                     if (horaEntrada.Value == DateTime.Now || horaSalida.Value < DateTime.Now)//la hora de entrada tiene que ser mayor que la de salida
                     {
                         MessageBox.Show("La hora salida debe ser mayor a la hora de entrada","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -92,6 +92,21 @@ namespace ProgramacionNCapas
         private void idEstudiante_Validating(object sender, CancelEventArgs e)
         {
             errorProvider.SetError(idEstudiante, "");
+        }
+
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
+            Conexion c = new Conexion();
+
+            if (ControldataGridView.CurrentRow == null)
+                return;
+
+            int id = Convert.ToInt32(ControldataGridView.CurrentRow.Cells["ID"].Value);
+
+
+
+            c.Eliminar();
+            ControldataGridView.Rows.Remove(ControldataGridView.CurrentRow);
         }
     }
 }
